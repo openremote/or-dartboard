@@ -29,7 +29,7 @@ In the middle we see our "ESP32 drive electronical dartboard". To the left of th
 >The boxes in the diagram **that contain other boxes**, can each be seen as a repository.
 
 #### Container Overview Esp32 Driven Dartboard
-This diagram shows the components that the Container: "Esp32 Driven Dartboard" consists of. We see that it's main component relies on 3 other components (which I called modules in the diagram). These 3 components, each further rely on a external component, obtained from a external library.
+This diagram shows the components that the Container: "Esp32 Driven Dartboard" consists of. We see that it's main component relies on 3 other components (which I called modules in the diagram). These 3 components, each further rely on a external component, obtained from an external library.
 
 ### (C3) Component Diagram Main
 ![Component Diagram for the Main file of ESP32 ](./img/esp32/c4/component-esp32.jpg)

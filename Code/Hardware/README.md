@@ -28,3 +28,22 @@ In the middle we see our "ESP32 drive electronical dartboard". To the left of th
 >
 >The boxes in the diagram **that contain other boxes**, can each be seen as a repository.
 
+This diagram shows the components that the Container: "Esp32 Driven Dartboard" consists of. We see that it's main component relies on 3 other components (which I called modules in the diagram). These 3 components, each further rely on a external component, obtained from a external library.
+
+### (C3) Component Diagram Main
+![Component Diagram for the Main file of ESP32 ](./Images/Main.JPG)
+This diagram shows, what the "Main.ino" component needs from the other 3 components. This is:
+* Using the "TTGOScreenMagic.cpp" component to utilize the TTGO-T-Display, from the ESP32, through SPI.
+* Using the "BLEServerHelper.cpp" component to utilize the Bluetooth Low Energy Antenna, mounted on the ESP32.
+* Using the "Adafruit_MCP23017_blessed.cpp" component to utilize the MCP23017 through I2C.
+
+### (C3) Component Diagram MCP23017
+![Component Diagram for the MCP23017 module](./Images/MCP23017ComponentDiagram.JPG)
+Here we see the Main.ino component, reaching into the MCP23017 container, to use the MatrixScanner.cpp for controlling the MCP23017 and reading the output from the 8x8 button matrix.
+ 
+### (C3) TTGO-Screen-Module
+![Component Diagram for the TTGO-Screen-Module](./Images/TTGO-Scherm-Module.JPG)
+
+### (C3) Component Diagram Bluetooth Module
+![Component Diagram for the Bluetooth module](./Images/ComponentDiagramBluetoothModule.JPG)
+

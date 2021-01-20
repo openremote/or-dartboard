@@ -9,7 +9,7 @@
 > Also, the code diagrams will not be shown. We will provide you directly with the code.
 
 ### (C1) Context Diagram
-![Context diagram for the ESP32 driven dartboard](./Images/ContextDiagram.jpg)
+![Context diagram for the ESP32 driven dartboard](./Images/ContextDiagram.JPG)
 >**Note**
 >
 >These diagrams are written in Dutch. I will do my best to translate them to English correctly.
@@ -23,7 +23,7 @@ In the middle we see our "ESP32 drive electronical dartboard". To the left of th
 * OpenRemote will also send data to the ESP32 driven dartboard when needed. (Using Bluetooth Low Energy)
 
 ### (C2) Container Diagram Esp32 Driven Dartboard
-![Container diagram for the ESP32 Driven Dartboard](./Images/ContainerDiagramEsp32.jpg)
+![Container diagram for the ESP32 Driven Dartboard](./Images/ContainerDiagramEsp32.JPG)
 >**Note**
 >
 >The boxes in the diagram **that contain other boxes**, can each be seen as a repository.

@@ -44,6 +44,9 @@ Here we see the Main.ino component, reaching into the MCP23017 container, to use
 ### (C3) TTGO-Screen-Module
 ![Component Diagram for the TTGO-Screen-Module](./img/esp32/c4/component-screen-module.jpg)
 
+**TTGOSCreenMagic.cpp** uses the external [TTGO-T-Display library](https://github.com/Xinyuan-LilyGO/TTGO-T-Display) to use the TTGO-T-Display, mounted on the ESP32 through SPI.
+
 ### (C3) Component Diagram Bluetooth Module
 ![Component Diagram for the Bluetooth module](./img/esp32/c4/component-bluetooth-module.jpg)
 
+Both **BLEServerHelper.cpp** and **BLEMyCallbacks.cpp** use the [external code library from espressif](https://github.com/espressif/arduino-esp32/tree/master/libraries/BLE/src) to control the BLE antenna, that is mounted on the ESP32. **Main** only uses **BLEServerHelper.cpp**

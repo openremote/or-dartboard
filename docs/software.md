@@ -20,12 +20,10 @@ The changes made to OpenRemote to add BLE support can be found in [this OpenRemo
 
 The game logic "server" (which is actually a client of sorts) is an external application connected to the same instance of OpenRemote as the dartboards. With MQTT the application listens for updates on the assets of the dartboard units and will write back changes to the dartboards' displays. This way all logic is separate from the dartboards which means the dartboards are themselves "dumb" and can be used for different things alongside games of darts.
 
-The Game Server, alongside managing the connection to OpenRemote via the MQTT protocol....
-
-The code for the game server can be found in this repo in the `<link directory>`.
+The code for the game logic server can be found [here](../gamelogic).
 
 ### ESP32 BLE server
 
 The ESP32 on the TTGO T-Display is responsible for handling bluetooth communication with the hardware, like sending updates for dart hits and updating scores on the display. We designed the underlying protocol to be as generic as possible, to make it easy to add other games or (ab)use the dartboard for non-game automations, like for example turning the lights on when someone throws a bulls-eye.
 
-All code which runs on the ESP32 can be found in this repo in the `<link directory>`.
+All code which runs on the ESP32 can be found [here](../esp32).

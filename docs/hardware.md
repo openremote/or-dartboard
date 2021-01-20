@@ -5,11 +5,13 @@
 * [LILYGO TTGO T-Display ESP32 module](http://www.lilygo.cn/prod_view.aspx?TypeId=50033&Id=1126&FId=t3:50033:3)
 * An [MCP23017 16-Bit I/O Expander](https://ww1.microchip.com/downloads/en/devicedoc/20001952c.pdf) w/ I²C interface
 * 5 * 7cm double-sided perfboard
-* ~2m of Ø1.1mm wire
+* ~2m of Ø1.1mm wire (preferably solid core)
 
 ## Reading the dart hits
-
-The hardware is based on a generic Chinese no-name dartboard which (like many of them) is based on a 8x8 button matrix to register dart hits (much like a keyboard). Using the MCP23017 16-bit I/O Expander, the ESP32 can use I²C to scan the matrix and register dart hits.
+The hardware is based on a generic Chinese no-name dartboard which (like many of them) is based on a 8x8 button matrix to register dart hits (much like a keyboard). Using the MCP23017 16-bit I/O Expander, the ESP32 can use I²C to scan the matrix and register dart hits. The connectors of this matrix looks like this: ![FPC Connectors of the dartbord](./img/hardware/diagrams/DartboardConnection.jpg)
+>**Note about image above**
+> 
+>These two cabels are called FPC-cables. These two FPC-cables, connect the 8x8 button matrix (through FPC-connectors) to the MCP23017.
 
 > **Note**
 >
@@ -25,6 +27,14 @@ A simplified diagram of the matrix scanning using the I/O expander:
 
 ![Simplified schematic of I/O Expander use](./img/hardware/diagrams/io_expander.svg)
 
+For a more detailed overview of the circuit we used for our electronical components:
+
+![Used circuit for the electronical components](./img/hardware/diagrams/Circuit.png)
+>**Note**
+>
+>The LED we connected to pin 1 (GPB0) of the MCP23017, was to test the MCP23017 pin. Feel free to cut this connection out of your circuit.
+>
+>This also count for the resistor between pin18 (reset) of the MCP23017. Feel free to remove this resistor. The circuit will keep working, but the 10k resistor on that pin is only needed, when the pin is supplied with 5v. 
 ## Final hardware
 
 Although we have made a digital schematic of the electronics of this project and we could have ordered a PCB, due to time constraints we ended up (poorly) soldering all of this together on a 5 * 7cm double-sided perfboard, using some Ø1.1mm wire to connect the chips & connectors together.

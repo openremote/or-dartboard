@@ -28,13 +28,13 @@ In the middle we see our "ESP32 drive electronical dartboard". To the left of th
 >
 >The boxes in the diagram **that contain other boxes**, can each be seen as a repository.
 
-####Container Overview Esp32 Driven Dartboard
+#### Container Overview Esp32 Driven Dartboard
 This diagram shows the components that the Container: "Esp32 Driven Dartboard" consists of. We see that it's main component relies on 3 other components (which I called modules in the diagram). These 3 components, each further rely on a external component, obtained from a external library.
 
 ### (C3) Component Diagram Main
 ![Component Diagram for the Main file of ESP32 ](./img/esp32/c4/component-esp32.jpg)
 
-####Component Overview Main
+#### Component Overview Main
 This diagram shows, what the "Main.ino" component needs from the other 3 components. This is:
 * Using the "TTGOScreenMagic.cpp" component to utilize the TTGO-T-Display, from the ESP32, through SPI.
 * Using the "BLEServerHelper.cpp" component to utilize the Bluetooth Low Energy Antenna, mounted on the ESP32.
@@ -43,17 +43,17 @@ This diagram shows, what the "Main.ino" component needs from the other 3 compone
 ### (C3) Component Diagram MCP23017
 ![Component Diagram for the MCP23017 module](./img/esp32/c4/component-matrix-module.jpg)
 
-####Component Overview MCP23017
+#### Component Overview MCP23017
 Here we see the Main.ino component, reaching into the MCP23017 container, to use the MatrixScanner.cpp for controlling the MCP23017 and reading the output from the 8x8 button matrix. The component **Adafruit_MCP23017_blessed.cpp** uses a [external library written by Adafruit](https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library)
  
 ### (C3) TTGO-Screen-Module
 ![Component Diagram for the TTGO-Screen-Module](./img/esp32/c4/component-screen-module.jpg)
 
-####Component Overview TTGO-Screen-Module
+#### Component Overview TTGO-Screen-Module
 **TTGOSCreenMagic.cpp** uses the external [TTGO-T-Display library](https://github.com/Xinyuan-LilyGO/TTGO-T-Display) to use the TTGO-T-Display, mounted on the ESP32 through SPI.
 
 ### (C3) Component Diagram Bluetooth Module
 ![Component Diagram for the Bluetooth module](./img/esp32/c4/component-bluetooth-module.jpg)
 
-####Component Overview Bluetooth Module
+#### Component Overview Bluetooth Module
 Both **BLEServerHelper.cpp** and **BLEMyCallbacks.cpp** use the [external code library from espressif](https://github.com/espressif/arduino-esp32/tree/master/libraries/BLE/src) to control the BLE antenna, that is mounted on the ESP32. **Main** only uses **BLEServerHelper.cpp**

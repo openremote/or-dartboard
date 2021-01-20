@@ -33,7 +33,7 @@ public:
   uint8_t digitalRead(uint8_t p);
 
   void writeGPIOAB(uint16_t);
-  /* BLESSED: Add writeGPIO */
+  /* BLESSED Custom: Add writeGPIO */
   void writeGPIO(uint8_t b, uint8_t t);
   uint16_t readGPIOAB();
   uint8_t readGPIO(uint8_t b);
